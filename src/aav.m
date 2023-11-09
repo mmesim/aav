@@ -10,7 +10,7 @@ for k=1:length(waveforms)
  
         for i=1:win:length(waveforms(k).WAVEFORM)-win
 
-        y=waveforms(k).WAVEFORM(round(i):round(i+window));
+        y=waveforms(k).WAVEFORM(round(i):round(i+win));
         % Remove trend
         yr=my_detrend(y,1);
         % Remove mean
